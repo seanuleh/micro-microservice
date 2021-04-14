@@ -1,0 +1,104 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Developers - ESP32",
+		"_postman_id": "a65600fb-a8c5-42c6-b0c7-cfe6ec6100d8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Developers",
+			"request": {
+				"url": "http://micromicro.local/developers",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Developer By ID",
+			"request": {
+				"url": "http://micromicro.local/developers/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Shoot Developer",
+			"request": {
+				"url": "http://micromicro.local/developers/KAnFv7sHC7600uq",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Birth Developer",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var length = 15;",
+							"var result           = [];",
+							"var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';",
+							"var charactersLength = characters.length;",
+							"for ( var i = 0; i < length; i++ ) {",
+							"  result.push(characters.charAt(Math.floor(Math.random() * ",
+							"charactersLength)));",
+							"}",
+							"",
+							"postman.setEnvironmentVariable(\"randomString\", result.join(''));"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://micromicro.local/developers",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"{{randomString}}\",\n  \"name\": \"Dev Devington\",\n  \"team\": \"The A Team\",\n  \"skils\": [\n    \"C#\"\n  ],\n  \"createdAt\": \"2020-09-20T14:34:23+10:00\",\n  \"updatedAt\": \"2020-09-20T16:00:00+10:00\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Developer",
+			"request": {
+				"url": "http://micromicro.local/developers/KAnFv7sHC7600uq",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"2\",\n  \"name\": \"Dev Devington the 2nd\",\n  \"team\": \"The A Team\",\n  \"skils\": [\n    \"C#\"\n  ],\n  \"createdAt\": \"2020-09-20T14:34:23+10:00\",\n  \"updatedAt\": \"2020-09-20T16:00:00+10:00\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
