@@ -48,7 +48,7 @@ Uses NVS for persistance, so has the following limitations:
 # Unit Tests
 nope
 
-# Libraries:
+# Libraries
 [lasselukkari/aWOT](https://github.com/lasselukkari/aWOT) - Arduino Web Server
 
 [rpolitex/ArduinoNvs](https://github.com/rpolitex/ArduinoNvs) - NVS Library
