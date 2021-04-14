@@ -50,5 +50,7 @@ nope
 
 # Libraries:
 [lasselukkari/aWOT](https://github.com/lasselukkari/aWOT) - Arduino Web Server
+
 [rpolitex/ArduinoNvs](https://github.com/rpolitex/ArduinoNvs) - NVS Library
+
 [interactive-matter/aJson](https://github.com/interactive-matter/aJson) - Arduino JSON
