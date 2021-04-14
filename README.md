@@ -31,12 +31,12 @@ curl -X POST \
 
 Retrieve a Developer by ID:
 ```
-curl -X GET http://micromicro.local/developers/:id
+curl -X GET http://micromicro.local/developers/LX0Q26rQqq7knzc
 ```
 
 Shoot a Developer:
 ```
-curl -X DELETE http://micromicro.local/developers/:id
+curl -X DELETE http://micromicro.local/developers/LX0Q26rQqq7knzc
 ```
 
 # Gotchyas
